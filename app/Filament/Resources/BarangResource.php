@@ -40,10 +40,10 @@ class BarangResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('type')->searchable()->copyable(),
-                TextColumn::make('harga')->copyable()
-                    ->formatStateUsing(fn(Barang $record): string => '' . number_format($record->harga, 0, '.', '.')),
                 TextColumn::make('harga_total')->copyable()
                     ->state(fn(Barang $record): string => '' . number_format($record->harga + 99000, 0, '.', '.')),
+                TextColumn::make('harga')->copyable()
+                    ->formatStateUsing(fn(Barang $record): string => '' . number_format($record->harga, 0, '.', '.')),
                 TextColumn::make('stok_dbo')->copyable(),
                 TextColumn::make('stok_pin')->copyable(),
                 TextColumn::make('stok_dpi')->copyable(),
