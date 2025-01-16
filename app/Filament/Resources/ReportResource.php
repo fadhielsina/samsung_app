@@ -26,7 +26,7 @@ class ReportResource extends Resource
     {
         return $form
             ->schema([
-                DatePicker::make('date'),
+                DatePicker::make('date')->default(now()),
                 Textarea::make('description')->rows(10)
                     ->cols(20),
             ]);
