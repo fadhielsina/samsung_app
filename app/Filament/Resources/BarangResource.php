@@ -27,11 +27,11 @@ class BarangResource extends Resource
             ->schema([
                 TextInput::make('type'),
                 TextInput::make('harga'),
+                TextInput::make('stok_rkt'),
+                TextInput::make('stok_dri'),
+                TextInput::make('stok_dpi'),
                 TextInput::make('stok_dbo'),
                 TextInput::make('stok_pin'),
-                TextInput::make('stok_dpi'),
-                TextInput::make('stok_dri'),
-                TextInput::make('stok_rkt'),
             ]);
     }
 
